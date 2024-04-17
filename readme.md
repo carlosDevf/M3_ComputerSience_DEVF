@@ -9,18 +9,20 @@
 - contact
 - slice
 - lenght
-- spread operator *
-- flat * 
-- at * 
-- sort =>
+- spread operator
+- flat
+- at 
+- sort
 - filter
 - reverse
 - Set crear nuevos elementos
 
--  temas que nos falta de arreglos
+--- 
+## temas que nos falta de arreglos
+
 - some
 - every
-- splice *** 
+- splice
 
 ### ejercicios propuestos    
     - cambiar un elemento en determinada posicion (carrito)
@@ -32,3 +34,4 @@
 
 ## Diapositivas
 [Arreglos](https://docs.google.com/presentation/d/1n3C26oIA8nNilU_h9e5KL1hcuLysEQ_ZuPVDyvR5bvQ/edit?usp=sharing)
+
