@@ -49,4 +49,28 @@ const regexRFC = /^([A-Z,Ñ,&]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9
 /* console.log(rfc.match(regexRFC)) */
 
 
+const palindromo = "anita lava la tina"
+const isPalindromeExplicado = function (palindromo) {
+  
+    // string cambio a un arreglo
+    const palindromoArray = palindromo.split(" ")
+    //
+    // const arrayReversed = palindromoArray.reverse()          
+    // uniamos los elementos de un arreglo y creamos un string
+    // pasabamos todos a minusculas
+    // string!
+    const arraypalindrome = palindromoArray.join("").toLowerCase()    
+    // crear un arreglo    
+    // darle la vuelta a ese arreglo
+    // unirlo en un string
+    const reverse = arraypalindrome.split("").reverse().join("")
+    
+    if (arraypalindrome === reverse) {
+        console.log("si es palindromo")
+    }else {
+        console.log("no es palindromo")
+    }
+} 
+
+isPalindrome(palindromo)
 

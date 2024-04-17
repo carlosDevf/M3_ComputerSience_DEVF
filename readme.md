@@ -1,5 +1,6 @@
 ## Estructura de datos Arreglos y sus metodos
  - Arreglos
+ - Objetos ** falta
  
 ## organizadas
 
@@ -11,14 +12,14 @@
 - spread operator *
 - flat * 
 - at * 
+- sort =>
+- filter
+- reverse
 - Set crear nuevos elementos
 
 -  temas que nos falta de arreglos
-- sort =>
-- filter
 - some
 - every
-- reverse
 - splice *** 
 
 ### ejercicios propuestos    
