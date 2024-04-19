@@ -85,7 +85,7 @@ showProducts()
 
 // pintar todos los productos del carrito
 function showCarritoProductos(){
-    
+
 }
 
 
@@ -103,8 +103,7 @@ function removeToCarrito () {
 function updateCarrito () {
     // ya existe el id? 
       //si => actualizo la cantidad
-      //no => no hagas nada
-    
+      //no => no hagas nada    
 }
 
 function cleanCarrito () {
