@@ -27,8 +27,37 @@ const storeImpresoras = [
     impresora2,
     impresora3, // buena practica    
 ]
+/* { style: 'currency', currency: 'EUR' } */
+function priceFormat (number) {
+    return  new Intl
+    .NumberFormat('es-MX', { maximumSignificantDigits: 3, style: "currency", currency: "MXN" })
+    .format(number)
+}
 
-console.log(storeImpresoras[1].precio)
+function showProducts (){
+    const parent = document.querySelector("#productos-container")
+    // iteramos el storeImpresoras
+    storeImpresoras.forEach((impresora) => {
+        // creamos un div 
+        const productDiv = document.createElement("div")
+        /* productDiv.classList.add("product")     */
+        console.log(productDiv)
+        // añadimos la estructura
+        productDiv.innerHTML = `
+        <div class="product">
+            <img src="${impresora.foto}">
+            <h2>${impresora.titulo}</h2>
+            <p>Precios: ${priceFormat(impresora.precio)}</p>
+            <button>Añadir a carrito</button>
+            <span>⭐</span>
+        </div>
+        `
+        parent.appendChild(productDiv)
+    })
+
+}
+
+showProducts()
 
 // donde voy a guardar lo que quiero comprar carrito
 // reducer => // objetos Globales
