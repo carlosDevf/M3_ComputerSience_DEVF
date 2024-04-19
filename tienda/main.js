@@ -34,35 +34,66 @@ function priceFormat (number) {
     .format(number)
 }
 
+/* <button onclick="addToCarrito(impresora)">Añadir a carrito</button> */
 function showProducts (){
+    // pinta toda la lista
     const parent = document.querySelector("#productos-container")
     // iteramos el storeImpresoras
     storeImpresoras.forEach((impresora) => {
         // creamos un div 
         const productDiv = document.createElement("div")
-        /* productDiv.classList.add("product")     */
-        console.log(productDiv)
+        /* productDiv.classList.add("product")     */        
         // añadimos la estructura
         productDiv.innerHTML = `
         <div class="product">
             <img src="${impresora.foto}">
             <h2>${impresora.titulo}</h2>
-            <p>Precios: ${priceFormat(impresora.precio)}</p>
-            <button>Añadir a carrito</button>
+            <p>Precios: ${priceFormat(impresora.precio)}</p>            
+            <button id="add-to-cart" data-id="${impresora.id}">Añadir a carrito</button>
             <span>⭐</span>
         </div>
         `
         parent.appendChild(productDiv)
     })
-
 }
+
+// permite que todo el dom este listo
+document.addEventListener("DOMContentLoaded", () => {
+    // Node LIST
+    const allButtons = document.querySelectorAll("#add-to-cart")
+    // interando
+    allButtons.forEach((button) => {
+        button.addEventListener('click', function(evento){
+            const dataID = evento.target.getAttribute("data-id")
+            console.log(dataID)
+            // busar el elemento dentro de los productos que coresponda al dataID === id
+            // crear una nueva estructura  que permita manejar el carrito
+            // 
+            const productDeCarrito = {
+                fechaCreacion: new Date(),
+                productId: dataID,
+                cantidad: 1
+            }
+
+            addToCarrito(productDeCarrito)
+        })
+    })
+})
 
 showProducts()
 
+
+// pintar todos los productos del carrito
+function showCarritoProductos(){
+    
+}
+
+
 // donde voy a guardar lo que quiero comprar carrito
 // reducer => // objetos Globales
-function addToCarrito () {
-
+function addToCarrito (producto) {
+    carrito.push(producto)
+    console.log("carrito", carrito)
 }
 
 function removeToCarrito () {
@@ -70,7 +101,10 @@ function removeToCarrito () {
 }
 
 function updateCarrito () {
-
+    // ya existe el id? 
+      //si => actualizo la cantidad
+      //no => no hagas nada
+    
 }
 
 function cleanCarrito () {
