@@ -24,6 +24,15 @@
 - every
 - splice
 
+
+// TODO VER APLICACION REAL
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+console.log(perro.campeonatos)
+
+if (perro?.campeonatos) {
+    console.log(perro.campeonatos)
+}
+
 ### ejercicios propuestos    
     - cambiar un elemento en determinada posicion (carrito)
         - añadir
