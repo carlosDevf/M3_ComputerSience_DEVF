@@ -58,6 +58,7 @@ function showProducts (){
 }
 
 // permite que todo el dom este listo
+// PARA VER QUE BOTON LE DOY CLICK
 document.addEventListener("DOMContentLoaded", () => {
     // Node LIST
     const allButtons = document.querySelectorAll("#add-to-cart")
@@ -67,8 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const dataID = evento.target.getAttribute("data-id")
             console.log(dataID)
             // busar el elemento dentro de los productos que coresponda al dataID === id
-            // crear una nueva estructura  que permita manejar el carrito
-            // 
+            // crear una nueva estructura  que permita manejar el carrito            
             const productDeCarrito = {
                 fechaCreacion: new Date(),
                 productId: dataID,
