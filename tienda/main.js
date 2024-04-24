@@ -22,10 +22,18 @@ const impresora3 = {
     foto: "https://http2.mlstatic.com/D_NQ_NP_997422-MLA40080811342_122019-O.webp",
 }
 
+const impresora4 = {
+    id: 3,
+    titulo: "Impresora multifunción Canon imageCLASS D1620 con wifi blanca y negra 120V - 127V",
+    precio: 13000,
+    foto: "https://http2.mlstatic.com/D_NQ_NP_997422-MLA40080811342_122019-O.webp",
+}
+
 const storeImpresoras = [
     impresora1,
     impresora2,
     impresora3, // buena practica    
+    impresora4
 ]
 /* { style: 'currency', currency: 'EUR' } */
 function priceFormat (number) {
@@ -49,7 +57,7 @@ function showProducts (){
             <img src="${impresora.foto}">
             <h2>${impresora.titulo}</h2>
             <p>Precios: ${priceFormat(impresora.precio)}</p>            
-            <button id="add-to-cart" data-id="${impresora.id}">Añadir a carrito</button>
+            <button id="add-to-cart" pepe="${impresora.id}">Añadir a carrito</button>
             <span>⭐</span>
         </div>
         `
@@ -62,10 +70,12 @@ function showProducts (){
 document.addEventListener("DOMContentLoaded", () => {
     // Node LIST
     const allButtons = document.querySelectorAll("#add-to-cart")
+    console.log(allButtons) // arreglo con nodos de hmtl y cada nodo tiene un addEventLister
     // interando
     allButtons.forEach((button) => {
+        // 
         button.addEventListener('click', function(evento){
-            const dataID = evento.target.getAttribute("data-id")
+            const dataID = evento.target.getAttribute("pepe")
             console.log(dataID)
             // busar el elemento dentro de los productos que coresponda al dataID === id
             // crear una nueva estructura  que permita manejar el carrito            
