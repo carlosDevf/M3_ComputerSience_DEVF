@@ -1,4 +1,4 @@
-const jedis = [
+export const jedis = [
   {
     name: "Luke Skywalker",
     age: 30,
