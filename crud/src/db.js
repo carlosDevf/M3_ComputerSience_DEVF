@@ -1,3 +1,5 @@
+export const titles = ["Name", "State", "Role", "Team", ""];
+
 export const jedis = [
   {
     name: "Luke Skywalker",
