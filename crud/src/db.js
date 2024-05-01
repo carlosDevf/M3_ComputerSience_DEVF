@@ -1,4 +1,4 @@
-export const titles = ["Name", "State", "Role", "Team", ""];
+export const titles = ["Name", "Age", "Role", "Team", ""];
 
 export const jedis = [
   {
