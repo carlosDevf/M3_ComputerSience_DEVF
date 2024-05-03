@@ -1,4 +1,4 @@
-export function trC({ name, age, team, role, photo }) {
+export function trC({ name, age, team, role, photo, id, index }) {
   return `
   <th class="flex gap-3 px-6 py-4 font-normal text-gray-900 items-center">
     <div class="relative h-10 w-10">
@@ -45,10 +45,10 @@ export function trC({ name, age, team, role, photo }) {
   </td>
   <td class="px-6 py-4">
     <div class="flex justify-end gap-4">
-      <button class="h-[30px] w-[30px] px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg hover:bg-gray-100 bord">
+      <button data-index="${index}" data-action="edit" class="h-[30px] w-[30px] px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg hover:bg-gray-100 bord">
         <img class="w-full h-full" src="./icons/edit.svg" alt="">
       </button>
-      <button class="h-[30px] w-[30px] px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg hover:bg-gray-100 bord" >
+      <button data-index="${index}" data-action="delete" class="h-[30px] w-[30px] px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg hover:bg-gray-100 bord" >
         <img class="w-full h-full" src="./icons/delete.svg" alt="">
       </button>
     </div>
