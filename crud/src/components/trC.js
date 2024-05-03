@@ -45,12 +45,12 @@ export function trC({ name, age, team, role, photo }) {
   </td>
   <td class="px-6 py-4">
     <div class="flex justify-end gap-4">
-      <a class="w-[20px]" href="#">
-        <img src="./icons/edit.svg" alt="">
-      </a>
-      <a class="w-[20px]" href="#">
-        <img src="./icons/delete.svg" alt="">
-      </a>
+      <button class="h-[30px] w-[30px] px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg hover:bg-gray-100 bord">
+        <img class="w-full h-full" src="./icons/edit.svg" alt="">
+      </button>
+      <button class="h-[30px] w-[30px] px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg hover:bg-gray-100 bord" >
+        <img class="w-full h-full" src="./icons/delete.svg" alt="">
+      </button>
     </div>
   </td>
   `;

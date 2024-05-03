@@ -15,7 +15,6 @@ export function renderUsersTable(users = jedis) {
 
   users.forEach((user) => {
     const tempTr = document.createElement("tr");
-    tempTr.className = "hover:bg-gray-50";
     tempTr.innerHTML = trC(user).trim();
 
     fragment.appendChild(tempTr);
