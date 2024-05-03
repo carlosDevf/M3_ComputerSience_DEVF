@@ -2,6 +2,7 @@ import { jedis, titles } from "./db.js";
 import { thC } from "./components/thC.js";
 import { renderUsersTable } from "./scripts/read.js";
 import { createUserTable } from "./scripts/create.js";
+import { currentState } from "./constants.js";
 
 const titlesTable = document.querySelector("#titlesTable");
 export const usersTable = document.getElementById("usersTable");
@@ -9,6 +10,7 @@ export const modal = document.getElementById("modal");
 const openModal = document.getElementById("open-modal");
 const closeModal = document.getElementById("close-modal");
 const createUserForm = document.querySelector("#create-user");
+export const state = document.querySelector("#state");
 
 // los ideal es que los template strings (componentes) sean funciones
 function renderTitlesTable() {
@@ -18,6 +20,8 @@ function renderTitlesTable() {
 
 window.addEventListener("DOMContentLoaded", function () {
   openModal.addEventListener("click", function () {
+    currentState.demo = "save";
+    state.textContent = currentState.demo === "save" ? "Add Jedi" : "Edit Jedi";
     modal.classList.remove("hidden");
   });
 
