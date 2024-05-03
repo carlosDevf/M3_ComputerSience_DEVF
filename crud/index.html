@@ -20,8 +20,30 @@
           <h1 class="text-4xl font-bold">Star Wars</h1>
         </div>
       </div>
+      <section class="flex justify-between items-center gap-3 py-6">
+        <button
+          id="open-modal"
+          role="button"
+          aria-label="open modal"
+          class="flex items-center justify-center w-1/2 px-5 py-2 tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto gap-x-2 hover:bg-blue-600"
+        >
+          <img src="./icons/plus.svg" alt="Add user" class="w-5 h-5 invert" />
+          <span>Add jedi</span>
+        </button>
+        <form id="search" class="relative flex items-center">
+          <span class="absolute">
+            <img src="./icons/search.svg" alt="Search" class="w-5 h-5 mx-3" />
+          </span>
+
+          <input
+            type="search"
+            placeholder="Search"
+            class="block w-full py-1.5 pr-5 text-gray-700 bg-white border border-gray-200 rounded-lg md:w-80 placeholder-gray-400/70 pl-11 rtl:pr-11 rtl:pl-5 focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+          />
+        </form>
+      </section>
       <!-- Tabla -->
-      <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
+      <div class="overflow-y-hidden rounded-lg border border-gray-200 shadow-md">
         <table class="w-[1024px] lg:w-full border-collapse bg-white text-left text-sm text-gray-500">
           <thead class="bg-gray-50">
             <tr id="titlesTable"></tr>
