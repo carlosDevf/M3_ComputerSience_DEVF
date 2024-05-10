@@ -25,6 +25,7 @@ export function renderUsersTable(users = jedis) {
       editButton.addEventListener("click", () => {
         const index = Number(editButton.dataset.index);
         const tempUser = jedis[index];
+        console.log({ tempUser })
 
         const tempForm = document.querySelector("#create-user");
         modal.classList.remove("hidden");
@@ -35,6 +36,14 @@ export function renderUsersTable(users = jedis) {
         tempForm.age.value = tempUser.age;
         tempForm.role.value = tempUser.role;
         tempForm.team.value = tempUser.team;
+        //añado al form el id del usuario que quiero cambiar
+        tempForm.setAttribute("data-id", tempUser.id)
+
+
+        console.log("tempForm --->", tempForm.name.value)
+        console.log("tempForm --->", tempForm.age.value)
+        console.log("tempForm --->", tempForm.role.value)
+        console.log("tempForm --->", tempForm.team.value)
 
       });
     }

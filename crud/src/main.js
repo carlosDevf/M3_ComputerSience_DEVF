@@ -3,6 +3,8 @@ import { thC } from "./components/thC.js";
 import { renderUsersTable } from "./scripts/read.js";
 import { createUserTable } from "./scripts/create.js";
 import { currentState } from "./constants.js";
+import { updateUserTable } from './scripts/update.js'
+import search from "./scripts/search.js";
 
 const titlesTable = document.querySelector("#titlesTable");
 export const usersTable = document.getElementById("usersTable");
@@ -30,8 +32,18 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
   renderTitlesTable();
-
   renderUsersTable();
+  search()
 
-  createUserForm.addEventListener("submit", createUserTable);
+
+createUserForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    if (state.textContent === 'Add Jedi') {
+      return createUserTable(e)
+    } 
+
+    if (state.textContent === 'Edit Jedi'){
+      updateUserTable(e)      
+    }    
+  });
 });
